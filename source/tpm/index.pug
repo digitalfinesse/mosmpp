@@ -1,0 +1,421 @@
+block variables
+
+doctype html
+html(lang="ru-RU")
+    include layout/head
+    include modules/css
+
+    body
+        include modules/header/header
+        block content
+
+        .mosmpp__container
+            .mosmpp__headerMenu.mosmpp__flex
+                .mosmpp__headerMenu-logo
+                    a(href="/").mosmpp__headerMenu-logo.mosmpp__headerMenu-link PRINT BAR
+                        |
+                        img(src="img/pages/main/top-logo-to-business.svg").mosmpp__headerMenu-logo-img
+
+                .mosmpp__headerMenu-contacts
+                    a(href="mailto:b2bclient@myprintbar.ru", target="_blank").mosmpp__headerMenu-link b2bclient@myprintbar.ru
+                    a(href="#").mosmpp__headerMenu-link.mosmpp__headerMenu-link--phone +7(495) 419-18-33
+
+
+
+        section.mosmpp__topBlock-background
+            .mosmpp__container.mosmpp__topBlock
+                .mosmpp__topBlock-logo
+                    a(href="/").mosmpp__topBlock-logo-link PRINT BAR
+                        |
+                        img(src="img/pages/main/top-logo-to-business.svg").mosmpp__topBlock-logo-img
+
+                .mosmpp__topBlock-title Печать на одежде оптом
+                .mosmpp__topBlock-subtitle От 10 изделий с доставкой по всей России
+
+                .mosmpp__topBlock-form
+                    .mosmpp__topBlock-form-item
+                        label(for="name_top_form").mosmpp__topBlock-form-label Ваше имя
+                        input(id="name_top_form", name="name_top_form", type="text", placeholder="Иванов Иван", required)
+
+                    .mosmpp__topBlock-form-item
+                        label(for="phone_top_form").mosmpp__topBlock-form-label Номер телефона
+                        input(id="phone_top_form", name="phone_top_form", type="tel", placeholder="+7 (903) 123 45 67", required)
+
+                    .mosmpp__topBlock-form-item
+                        label(for="email_top_form").mosmpp__topBlock-form-label Электронная почта
+                        input(id="email_top_form", name="email_top_form" type="email", placeholder="yourmail@mail.com", required)
+
+                    .mosmpp__topBlock-form-item
+                        input(type="submit", value="Получить прайс").mosmpp__topBlock-form-submit
+
+                .mosmpp__topBlock-rules Заполняя форму, вы соглашаетесь с обработкой персональных данных согласно Политике конфиденциальности
+
+
+
+        .mosmpp__container
+            .mosmpp__title Ассортимент для любых задач
+            .mosmpp__assortiment.mosmpp__flex
+                .mosmpp__assortiment-item
+                    .mosmpp__assortiment-item-img
+                        img(src="img/pages/main/assortiment-t-shirt-original.png")
+                    .mosmpp__assortiment-item-title футболки
+                    .mosmpp__assortiment-item-description Классика/ рукав реглан/ рукав отрезной м/ж от XS до 5XL и детские р. 104-158
+                    .mosmpp__assortiment-item-price От 560 рублей
+                    .mosmpp__assortiment-item-button
+                        a(href="#bottom_form").mosmpp__assortiment-item-button-link Узнать подробнее
+
+                .mosmpp__assortiment-item
+                    .mosmpp__assortiment-item-img
+                        img(src="img/pages/main/assortiment-sweatshot-original.png")
+                    .mosmpp__assortiment-item-title Свитшоты
+                    .mosmpp__assortiment-item-description Классический вариант свитшота/ любой дизайн
+                    .mosmpp__assortiment-item-price От 830 рублей
+                    .mosmpp__assortiment-item-button
+                        a(href="#bottom_form").mosmpp__assortiment-item-button-link Узнать подробнее
+
+                .mosmpp__assortiment-item
+                    .mosmpp__assortiment-item-img
+                        img(src="img/pages/main/assortiment-hoodie-original.png")
+                    .mosmpp__assortiment-item-title ХУДИ
+                    .mosmpp__assortiment-item-description Классика/ карман кенгуру/ рукав реглан
+                    .mosmpp__assortiment-item-price От 899 рублей
+                    .mosmpp__assortiment-item-button
+                        a(href="#bottom_form").mosmpp__assortiment-item-button-link Узнать подробнее
+
+                .mosmpp__assortiment-item
+                    .mosmpp__assortiment-item-img
+                        img(src="img/pages/main/assortiment-sport-original.png")
+                    .mosmpp__assortiment-item-title Спортивная одежда
+                    .mosmpp__assortiment-item-description Футболки/ штаны/ футбольная форма/ легинсы м/ж от XS до 5XL
+                    .mosmpp__assortiment-item-price От 599 рублей
+                    .mosmpp__assortiment-item-button
+                        a(href="#bottom_form").mosmpp__assortiment-item-button-link Узнать подробнее
+
+
+
+        .mosmpp__container
+            .mosmpp__title ЗАКРЫВАЕМ ЛЮБЫЕ ПОТРЕБНОСТИ
+            .mosmpp__needs.mosmpp__flex
+                .mosmpp__needs-item
+                    .mosmpp__needs-item-img.mosmpp__needs-item-img-promo
+                        img(src="img/pages/main/needs-promo.svg")
+                    .mosmpp__needs-item-info
+                        .mosmpp__needs-item-title Промо-одежда
+                        .mosmpp__needs-item-description Брендированная одежда для промо-акций и рекламных кампаний
+                        .mosmpp__needs-item-button
+                            a(href="#bottom_form").mosmpp__needs-item-button-link Узнать подробнее
+
+                .mosmpp__needs-item
+                    .mosmpp__needs-item-img.mosmpp__needs-item-img-sport
+                        img(src="img/pages/main/needs-sport.svg")
+                    .mosmpp__needs-item-info
+                        .mosmpp__needs-item-title Спортивная одежда
+                        .mosmpp__needs-item-description Футболки, майки, штаны на материалах, разработанныз для спорта
+                        .mosmpp__needs-item-button
+                            a(href="#bottom_form").mosmpp__needs-item-button-link Узнать подробнее
+
+                .mosmpp__needs-item
+                    .mosmpp__needs-item-img.mosmpp__needs-item-img-rozn
+                        img(src="img/pages/main/needs-rozn.svg")
+                    .mosmpp__needs-item-info
+                        .mosmpp__needs-item-title Одежда для ассортимента вашего магазина
+                        .mosmpp__needs-item-description Товары-бестселлеры с модными принтами по более чем 500 тематикам
+                        .mosmpp__needs-item-button
+                            a(href="#bottom_form").mosmpp__needs-item-button-link Узнать подробнее
+
+                .mosmpp__needs-item
+                    .mosmpp__needs-item-img.mosmpp__needs-item-img-corp
+                        img(src="img/pages/main/needs-corp.svg")
+                    .mosmpp__needs-item-info
+                        .mosmpp__needs-item-title Корпоративная
+                            br
+                            |   одежда
+                        .mosmpp__needs-item-description Одежда с вашим фирменным стилем для сотрудников и партнеров
+                        .mosmpp__needs-item-button
+                            a(href="#bottom_form").mosmpp__needs-item-button-link Узнать подробнее
+
+
+
+        .mosmpp__container
+            .mosmpp__title ДВА ВИДА ПЕЧАТИ НА ТКАНИ
+            .mosmpp__printing.mosmpp__flex
+                .mosmpp__printing-block
+                    .mosmpp__printing-block-img
+                        img(src="img/pages/main/printing-sublimation-original.jpg")
+                    .mosmpp__printing-block-title сублимация
+                    ul.mosmpp__printing-block-list
+                        li.mosmpp__printing-block-list-item 50 видов ткани для печати или ваша
+                        li.mosmpp__printing-block-list-item HD качество нанесения
+                        li.mosmpp__printing-block-list-item 30 типов изделий с лекалами всех размеров
+                        li.mosmpp__printing-block-list-item Разработка лекал под вас за 1 день
+                        li.mosmpp__printing-block-list-item От 220 рублей за погонный метр
+                    .mosmpp__printing-block-button
+                        a(href="#bottom_form").mosmpp__printing-block-button-link Узнать подробнее
+
+                .mosmpp__printing-block
+                    .mosmpp__printing-block-img
+                        img(src="img/pages/main/printing-cotton-original.jpg")
+                    .mosmpp__printing-block-title Печать на хлопке
+                    ul.mosmpp__printing-block-list
+                        li.mosmpp__printing-block-list-item Заказ от 20 п.м. на 100% хлопке
+                        li.mosmpp__printing-block-list-item Экологически чистые чернила (0+)
+                        li.mosmpp__printing-block-list-item Производственная линия нового поколения, практически безграничные возможности
+                    .mosmpp__printing-block-button
+                        a(href="#bottom_form").mosmpp__printing-block-button-link Узнать подробнее
+
+
+        .mosmpp__container
+            .mosmpp__title ПРОИЗВОДИМ ОДЕЖДУ ПОЛНЫМ ЦИКЛОМ
+
+        section.mosmpp__background.mosmpp__background--pink
+            .mosmpp__container.mosmpp__cycling.mosmpp__flex
+                .mosmpp__cycling-item.mosmpp__cycling-item-first
+                    .mosmpp__cycling-item-top.mosmpp__cycling-item-top-first
+                        span.vykr Выкройки
+                    .mosmpp__cycling-item-text Готовые или разрабатываем под вас
+
+                .mosmpp__cycling-item.mosmpp__cycling-item-middle
+                    .mosmpp__cycling-item-top.mosmpp__cycling-item-top-middle Дизайн
+                    .mosmpp__cycling-item-text Каталог готовых принтов или ваш дизайн
+
+                .mosmpp__cycling-item.mosmpp__cycling-item-middle
+                    .mosmpp__cycling-item-top.mosmpp__cycling-item-top-middle Ткань
+                    .mosmpp__cycling-item-text 50 видов ткани или ваша
+
+                .mosmpp__cycling-item.mosmpp__cycling-item-middle
+                    .mosmpp__cycling-item-top.mosmpp__cycling-item-top-middle Печать
+                    .mosmpp__cycling-item-text Запечатываем 100% поверхности изделия
+
+                .mosmpp__cycling-item.mosmpp__cycling-item-last
+                    .mosmpp__cycling-item-top.mosmpp__cycling-item-top-last Пошив
+                    .mosmpp__cycling-item-text От 10 до 1000 изделий в сутки
+
+
+
+        .mosmpp__container
+            .mosmpp__title ГАРАНТИРОВАННОЕ КАЧЕСТВО СУБЛИМАЦИИ
+            .mosmpp__subtitle Рисунок не сотрется даже после 300 стирок
+            .mosmpp__garant.mosmpp__flex
+                .mosmpp__garant-block.mosmpp__garant-block-large
+                    .mosmpp__garant-block-large-img
+                        img(src="img/pages/main/garant-large-original.jpg")
+                    .mosmpp__garant-block-large-info
+                        .mosmpp__garant-block-info-title 3D КАЧЕСТВО И ЯРКОСТЬ
+                        .mosmpp__garant-block-info-text Наши технологии позволяют достичь фотографического качества печати 720х540 dpi. Принты не выцветают и не выстирываются.
+
+                .mosmpp__garant-block.mosmpp__garant-block-right
+                    .mosmpp__garant-block-small
+                        .mosmpp__garant-block-small-img
+                            img(src="img/pages/main/garant-fly-original.jpg")
+                        .mosmpp__garant-block-small-info
+                            .mosmpp__garant-block-info-title ЭКОЛОГИЧНЫЕ КРАСКИ
+                            .mosmpp__garant-block-info-text Мы печатаем только гипоаллергенными эко-красками, поэтому наша продукция абсолютно безопасна для детей.
+                    .mosmpp__garant-block-small
+                        .mosmpp__garant-block-small-img
+                            img(src="img/pages/main/garant-cloth-original.jpg")
+                        .mosmpp__garant-block-small-info
+                            .mosmpp__garant-block-info-title УМНАЯ ТКАНЬ
+                            .mosmpp__garant-block-info-text Используем только натуральные дыщащие материалы с сертификатами качества.
+
+
+        .mosmpp__container
+            .mosmpp__smart.mosmpp__flex
+                .mosmpp__smart-block
+                    .mosmpp__title.mosmpp__smart-block-title РАБОТАЕМ С УМНЫМИ ТКАНЯМИ
+                    .mosmpp__smart-block-text Мы работаем с лучшими поставщиками ткани из Турции и России, прошедшими сертификацию и проверку отделом контроля качества.
+                    .mosmpp__smart-block-text 50 видов ткани, подбор плотности под вас, или печать на вашей ткани:
+
+                    .mosmpp__certificate.mosmpp__flex
+                        .mosmpp__certificate-item ИНТЕРЛОК
+                        .mosmpp__certificate-item КУЛИРКА
+                        .mosmpp__certificate-item ЛОЖНАЯ&nbsp;СЕТКА
+                        .mosmpp__certificate-item ФУТЕР
+                        .mosmpp__certificate-item СЭНДВИЧ
+                        .mosmpp__certificate-item ПИКЕ
+                        .mosmpp__certificate-item ДЖЕРСИ
+                        .mosmpp__certificate-item СЭНДВИЧ&nbsp;БРАШ
+                        .mosmpp__certificate-item БИФЛЕКС
+                        .mosmpp__certificate-item МОКРЫЙ&nbsp;ШЕЛК
+                        .mosmpp__certificate-item ДЮСПО
+                        .mosmpp__certificate-item ГАБАРДИН
+
+                .mosmpp__smart-block
+                    img(src="img/pages/main/certificate-of-conformity-original.jpg").mosmpp__smart-block-img
+
+
+
+        .mosmpp__container
+            .mosmpp__title наше производство находится в&nbsp;России
+            .mosmpp__subtitle Прямая трансляция с нашего производства в&nbsp;г.&nbsp;Ногинск
+
+        .mosmpp__container
+            .iv-embed
+                .iv-v
+                    iframe.iv-i(src='https://open.ivideon.com/embed/v2/?server=100-Gc8RuAOmphZGxLT0vMvYkv&camera=0&width=&height=&lang=ru' width='100%' frameborder='0' allowfullscreen='')
+
+
+
+        .mosmpp__container.mosmpp__container-wobp
+            .mosmpp__title Понравилось?
+                .mosmpp__title-span Приезжайте&nbsp;в&nbsp;гости!
+
+
+        section.mosmpp__midFormBlock-background
+            .mosmpp__container
+                .mosmpp__topBlock-form
+                    .mosmpp__topBlock-form-item
+                        label(for="email_mid_form").mosmpp__topBlock-form-label.mosmpp__topBlock-form-label--mid Ваша электронная почта
+                        input(id="email_mid_form", name="email_mid_form" type="email", placeholder="yourmail@mail.com", required)
+
+                    .mosmpp__topBlock-form-item
+                        label(for="name_mid_form").mosmpp__topBlock-form-label.mosmpp__topBlock-form-label--mid Ваше имя
+                        input(id="name_mid_form", name="name_mid_form", type="text", placeholder="Иванов Иван", required)
+
+                    .mosmpp__topBlock-form-item
+                        label(for="phone_mid_form").mosmpp__topBlock-form-label.mosmpp__topBlock-form-label--mid Номер телефона
+                        input(id="phone_mid_form", name="phone_mid_form", type="tel", placeholder="+7 (903) 123 45 67", required)
+
+                    .mosmpp__topBlock-form-item
+                        input(type="submit", value="Записаться!", id="submit_mid_form").mosmpp__topBlock-form-submit.mosmpp__topBlock-form-submit-mid
+        .mosmpp__container
+            .mosmpp__midFormBlock-rules Заполняя форму, вы соглашаетесь с обработкой персональных данных согласно Политике конфиденциальности
+
+
+
+        .mosmpp__container
+            .mosmpp__title НАШ ОПЫТ
+            .mosmpp__subtitle Один из кейсов 2017 года, за 14 дней произвести и доставить 20 000 изделий в пустыню, где проходил один из этапов известного ралли, мы справились.
+
+            .owl-carousel.owl-theme.owl-loaded
+                .owl-stage-outer
+                    .owl-stage
+                        .owl-item
+                            .owl-carousel-img
+                                img(src="img/pages/main/comments/comment01-480w.jpg")
+
+                        .owl-item
+                            .owl-carousel-img
+                                img(src="img/pages/main/comments/comment02-480w.jpg")
+
+                        .owl-item
+                            .owl-carousel-img
+                                img(src="img/pages/main/comments/comment03-480w.jpg")
+
+                        .owl-item
+                            .owl-carousel-img
+                                img(src="img/pages/main/comments/comment04-480w.jpg")
+
+        section.mosmpp__background.mosmpp__background--gray
+            .mosmpp__container.mosmpp__experience
+                .mosmpp__experience-item
+                    .mosmpp__experience-item-numbers 300
+                        span.mosmpp__experience-item-numbers-span &nbsp;шт.
+                    .mosmpp__experience-item-description Видов ткани синтетика и&nbsp;хлопок
+
+                .mosmpp__experience-item
+                    .mosmpp__experience-item-numbers 1200
+                        span.mosmpp__experience-item-numbers-span &nbsp;шт.
+                    .mosmpp__experience-item-description Заказов в день Розница и ОПТ
+
+                .mosmpp__experience-item
+                    .mosmpp__experience-item-numbers 970 000
+                        span.mosmpp__experience-item-numbers-span &nbsp;шт.
+                    .mosmpp__experience-item-description Погонных метров мы Запечатали за 2016 год
+
+                .mosmpp__experience-item
+                    .mosmpp__experience-item-numbers 85 000
+                        span.mosmpp__experience-item-numbers-span &nbsp;шт.
+                    .mosmpp__experience-item-description Собственных дизайнов
+
+
+
+        .mosmpp__container
+            .mosmpp__title нам доверяют уже
+                span.mosmpp__title-transparent &nbsp;748&nbsp;компаний
+            .mosmpp__subtitle Гибко интегрируемся в ваши бизнес-процессы и становимся надежной опорой в вопросах печати и пошива
+
+
+        section.mosmpp__background.mosmpp__background--gray
+            .mosmpp__container.mosmpp__trust
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-tnt-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-printbar.svg").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-printio-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-whiskas-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-coca-cola-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-cska-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-mts-original.jpg").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-wargaming-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-dpd-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-cdek-original.png").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-comedy-original.jpg").mosmpp__trust-logo-img
+                .mosmpp__trust-logo
+                    img(src="img/pages/main/trust/trust-logo-crazy-original.png").mosmpp__trust-logo-img
+
+
+
+
+        section.mosmpp__bottomForm-background
+            a(name="bottom_form")
+            .mosmpp__container
+                .mosmpp__title.mosmpp__title-bottomForm ОДЕЖДА ОПТОМ ОТ ПРОИЗВОДИТЕЛЯ
+                .mosmpp__subtitle.mosmpp__subtitle-bottomForm Одежда с полной запечаткой с доставкой по всей России
+
+            .mosmpp__container
+                .mosmpp__bottomForm-form
+                    .mosmpp__bottomForm-form-item
+                        label(for="name_bottom_form").mosmpp__bottomForm-form-label Ваше имя
+                        input(id="name_bottom_form", name="name_bottom_form", type="text", placeholder="Иванов Иван", required)
+
+                    .mosmpp__bottomForm-form-item
+                        label(for="phone_bottom_form").mosmpp__bottomForm-form-label Номер телефона
+                        input(id="phone_bottom_form", name="phone_bottom_form", type="tel", placeholder="+7 (903) 123 45 67", required)
+
+                    .mosmpp__bottomForm-form-item
+                        label(for="email_bottom_form").mosmpp__bottomForm-form-label Ваша электронная почта
+                        input(id="email_bottom_form", name="email_bottom_form" type="email", placeholder="yourmail@mail.com", required)
+
+                    .mosmpp__bottomForm-form-item.mosmpp__bottomForm-form-item-submit
+                        input(type="submit", value="Получить прайс", id="submit_bottom_form").mosmpp__bottomForm-form-submit
+
+                    .mosmpp__bottomForm-rules Заполняя форму, вы соглашаетесь с обработкой персональных данных согласно Политике конфиденциальности
+
+
+
+        .mosmpp__container
+            .mosmpp__title НАШИ КОНТАКТЫ
+
+            .mosmpp__contacts.mosmpp__flex
+                .mosmpp__contacts-map
+                    iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A1304513e7405c03604e98d8450697995706c37ea99fca309896f94e3b33986fa&source=constructor' width='100%' height='600' frameborder='0')
+
+
+                .mosmpp__contacts-addresses.mosmpp__flex
+                    .mosmpp__contacts-addresses-item
+                        .mosmpp__contacts-addresses-name Офис
+                        .mosmpp__contacts-addresses-street г. Москва,
+                            br
+                            |   ул. Варшавское шоссе, 1 ст. 6
+                        .mosmpp__contacts-addresses-phone +7 (495) 419-18-31
+
+                    .mosmpp__contacts-addresses-item
+                        .mosmpp__contacts-addresses-name Производство
+                        .mosmpp__contacts-addresses-street г. Ногинск,
+                            br
+                            |   ул. Индустриальная, 41
+                        .mosmpp__contacts-addresses-phone +7 (985) 757-23-23
+
+        br
+
+        include modules/footer/footer
+        include modules/js

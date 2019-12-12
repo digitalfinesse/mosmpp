@@ -1,0 +1,28 @@
+//script(src='//code.jquery.com/jquery-3.4.1.min.js' integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+
+script(src='js/jquery.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/jquery.maskedinput.min.js')
+
+script
+    |   jQuery(document).ready(function(){
+    |       $('#phone_top_form').mask('+7 (999) 999 99 99');
+    |       $('#phone_mid_form').mask('+7 (999) 999 99 99');
+    |       $('#phone_bottom_form').mask('+7 (999) 999 99 99');
+    |
+    |       $('.owl-carousel').owlCarousel({
+    |           loop: true,
+    |           margin: 15,
+    |           center: true,
+    |           autoplay: true,
+    |           responsive: {
+    |               0: {
+    |                   items: 1
+    |               },
+    |               768: {
+    |                   items: 3
+    |               }
+    |           },
+    |           nav: false
+    |       });
+    |   });

@@ -1,0 +1,371 @@
+//colors
+$white: #fff;
+$color_science_blue_approx: #004fe4;
+//@extend-elements
+//original selectors
+//ul, ol
+%customreset_1 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%customreset_2 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+//original selectors
+//sub, sup
+%customreset_3 {
+  font-size: inherit;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+//original selectors
+//button, input, optgroup, select, textarea
+%customreset_4 {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  letter-spacing: inherit;
+  color: inherit;
+  border: none;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0;
+  background-color: transparent;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+}
+//original selectors
+//.cover-pic, .contain-pic
+%customreset_5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: inherit;
+  &:before {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: inherit;
+  }
+  &:after {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: inherit;
+  }
+}
+html {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  height: 100%;
+}
+body {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  background-color: $white;
+  text-rendering: $render-mode;
+  text-decoration-skip: objects;
+}
+:focus {
+  outline: none;
+  &:-moz-placeholder {
+    opacity: 0;
+  }
+  &:-ms-input-placeholder {
+    opacity: 0;
+  }
+}
+p {
+  margin: 0;
+}
+dd {
+  margin: 0;
+}
+dl {
+  margin: 0;
+}
+figure {
+  margin: 0;
+}
+blockquote {
+  margin: 0;
+  quotes: none;
+}
+q {
+  quotes: none;
+}
+ul {
+  @extend %customreset_1;
+}
+ol {
+  @extend %customreset_1;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th {
+  font-weight: inherit;
+}
+h1 {
+  @extend %customreset_2;
+}
+h2 {
+  @extend %customreset_2;
+}
+h3 {
+  @extend %customreset_2;
+}
+h4 {
+  @extend %customreset_2;
+}
+h5 {
+  @extend %customreset_2;
+}
+h6 {
+  @extend %customreset_2;
+}
+audio {
+  display: block;
+}
+video {
+  display: block;
+}
+img {
+  border: none;
+}
+iframe {
+  border: none;
+}
+pre {
+  font-family: $family-monospace, $family-monospace;
+  font-size: inherit;
+}
+code {
+  font-family: $family-monospace, $family-monospace;
+  font-size: inherit;
+}
+kbd {
+  font-family: $family-monospace, $family-monospace;
+  font-size: inherit;
+}
+samp {
+  font-family: $family-monospace, $family-monospace;
+  font-size: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+abbr {
+  text-decoration: none;
+  border: none;
+}
+b {
+  font-weight: inherit;
+}
+strong {
+  font-weight: inherit;
+}
+i {
+  font-style: inherit;
+}
+em {
+  font-style: inherit;
+}
+dfn {
+  font-style: inherit;
+}
+mark {
+  color: inherit;
+  background-color: transparent;
+}
+small {
+  font-size: inherit;
+}
+sub {
+  @extend %customreset_3;
+  bottom: -.25em;
+}
+sup {
+  @extend %customreset_3;
+  top: -.5em;
+}
+button {
+  @extend %customreset_4;
+  overflow: visible;
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+  &:-moz-focusring {
+    outline: none;
+  }
+}
+input {
+  @extend %customreset_4;
+  overflow: visible;
+}
+optgroup {
+  @extend %customreset_4;
+}
+select {
+  @extend %customreset_4;
+  text-align: left;
+  text-transform: none;
+  appearance: none;
+}
+textarea {
+  @extend %customreset_4;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+}
+[type='button'] {
+  cursor: pointer;
+  &:-moz-focusring {
+    outline: none;
+  }
+}
+[type='reset'] {
+  cursor: pointer;
+  &:-moz-focusring {
+    outline: none;
+  }
+}
+[type='submit'] {
+  cursor: pointer;
+  &:-moz-focusring {
+    outline: none;
+  }
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+[type='button']::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+[type='reset']::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+[type='number']::-webkit-inner-spin-button {
+  height: auto;
+}
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+[type='search']::-webkit-search-decoration {
+}
+[type='search'] {
+  outline: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+legend {
+  display: block;
+  padding: 0;
+  white-space: normal;
+}
+select::-ms-expand {
+  display: none;
+}
+::-webkit-input-placeholder {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .3s;
+  opacity: 1;
+  color: inherit;
+}
+::-moz-placeholder {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .3s;
+  opacity: 1;
+  color: inherit;
+}
+:-moz-placeholder {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .3s;
+  opacity: 1;
+  color: inherit;
+}
+:-ms-input-placeholder {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .3s;
+  opacity: 1;
+  color: inherit;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+}
+svg {
+}
+[hidden] {
+  display: none;
+}
+:disabled {
+  cursor: not-allowed;
+}
+.disabled {
+  cursor: not-allowed;
+}
+::-ms-clear {
+  display: none;
+}
+:-webkit-autofill {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 13.9275766vh $white inset;
+}
+::selection {
+  color: $white;
+  background-color: $color_science_blue_approx;
+}
+.visually-hidden {
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.cover-pic {
+  @extend %customreset_5;
+  object-fit: cover;
+}
+.contain-pic {
+  @extend %customreset_5;
+  object-fit: contain;
+}
+.footer-page {
+  margin-top: auto;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
+}

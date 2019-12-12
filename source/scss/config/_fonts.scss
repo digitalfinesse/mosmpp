@@ -1,0 +1,987 @@
+//fonts
+//$family-pt-sans: 'PT Sans';
+//$family-bebas-neue: 'Bebas Neue';
+//$family-bebas-neue-book: 'Bebas Neue Book';
+//$family-emoji: 'Symbola';
+//$family-emoji: 'emoji';
+$family-notomoji: 'Notomoji';
+$family-notomoji-color: 'NotomojiColor';
+$family-pt-sans: 'PT Sans';
+$family-pt-sans-narrow: 'PT Sans Narrow';
+$family-pt-sans-caption: 'PT Sans Caption';
+//$family-bebas-neue: 'Bebas Neue';
+//$family-bebas-neue-book: 'Bebas Neue Book';
+@mixin font_default {
+  font-display: swap;
+}
+////urls
+////woff2
+//$font-url-pt-regular-woff2: url(../../fonts/PTSans-Regular.woff2);
+//$font-url-pt-italic-woff2: url(../../fonts/PTSans-Italic.woff2);
+//$font-url-pt-bold-woff2: url(../../fonts/PTSans-Bold.woff2);
+//$font-url-pt-bolditalic-woff2: url(../../fonts/PTSans-BoldItalic.woff2);
+//$font-url-pt-thin-woff2: url(../../fonts/BebasNeue-Thin.woff2);
+//$font-url-bebas-neue-regular-woff2: url(../../fonts/BebasNeueRegular.woff2);
+//$font-url-bebas-neue-book-woff2: url(../../fonts/BebasNeueBook.woff2);
+//$font-url-bebas-neue-light-woff2: url(../../fonts/BebasNeueLight.woff2);
+//$font-url-bebas-neue-bold-woff2: url(../../fonts/BebasNeueBold.woff2);
+////woff
+//$font-url-pt-regular-woff: url(../../fonts/PTSans-Regular.woff);
+//$font-url-pt-italic-woff: url(../../fonts/PTSans-Italic.woff);
+//$font-url-pt-bold-woff: url(../../fonts/PTSans-Bold.woff);
+//$font-url-pt-bolditalic-woff: url(../../fonts/PTSans-BoldItalic.woff);
+//$font-url-pt-thin-woff: url(../../fonts/BebasNeue-Thin.woff);
+//$font-url-bebas-neue-regular-woff: url(../../fonts/BebasNeueRegular.woff);
+//$font-url-bebas-neue-book-woff: url(../../fonts/BebasNeueBook.woff);
+//$font-url-bebas-neue-light-woff: url(../../fonts/BebasNeueLight.woff);
+//$font-url-bebas-neue-bold-woff: url(../../fonts/BebasNeueBold.woff);
+//@font-face {
+//  font-family: $family-pt-sans;
+//  font-weight: normal;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('PT Sans'), local('PTSans-Regular'), $font-url-pt-regular-woff2 format('woff2'), $font-url-pt-regular-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-pt-sans;
+//  font-weight: normal;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: local('PT Sans Italic'), local('PTSans-Italic'), $font-url-pt-italic-woff2 format('woff2'), $font-url-pt-italic-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-pt-sans;
+//  font-weight: 700;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('PT Sans Bold'), local('PTSans-Bold'), $font-url-pt-bold-woff2 format('woff2'), $font-url-pt-bold-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-pt-sans;
+//  font-weight: 700;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), $font-url-pt-bolditalic-woff2 format('woff2'), $font-url-pt-bolditalic-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-bebas-neue;
+//  font-weight: 100;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), $font-url-pt-thin-woff2 format('woff2'), $font-url-pt-thin-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-bebas-neue;
+//  font-weight: normal;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('Bebas Neue Regular'), local('BebasNeueRegular'), $font-url-bebas-neue-regular-woff2 format('woff2'), $font-url-bebas-neue-regular-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-bebas-neue-book;
+//  font-weight: normal;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('Bebas Neue Book'), local('BebasNeueBook'), $font-url-bebas-neue-book-woff2 format('woff2'), $font-url-bebas-neue-book-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-bebas-neue;
+//  font-weight: 300;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('Bebas Neue Light'), local('BebasNeueLight'), $font-url-bebas-neue-light-woff2 format('woff2'), $font-url-bebas-neue-light-woff format('woff');
+//}
+//@font-face {
+//  font-family: $family-bebas-neue;
+//  font-weight: 700;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: local('Bebas Neue Bold'), local('BebasNeueBold'), $font-url-bebas-neue-bold-woff2 format('woff2'), $font-url-bebas-neue-bold-woff format('woff');
+//}
+//@font-face {
+//  font-family: 'fontello';
+//  font-weight: normal;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: url('../../fonts/fontello.woff2') format('woff2'),
+//  url('../../fonts/fontello.woff') format('woff'),
+//  url('../../fonts/fontello.svg#fontello') format('svg');
+//}
+//@media screen and (-webkit-min-device-pixel-ratio: 0) {
+//  @font-face {
+//    font-family: 'fontello';
+//    src: url('../../fonts/fontello.svg#fontello') format('svg');
+//  }
+//}
+////fonts
+//$font_0: 'Roboto';
+////urls
+//$url_0: url(../../fonts/Roboto-LightItalic.woff2);
+//$url_1: url(../../fonts/Roboto-LightItalic.woff);
+//$url_2: url(../../fonts/Roboto-ThinItalic.woff2);
+//$url_3: url(../../fonts/Roboto-ThinItalic.woff);
+//$url_4: url(../../fonts/Roboto-Bold.woff2);
+//$url_5: url(../../fonts/Roboto-Bold.woff);
+//$url_6: url(../../fonts/Roboto-Black.woff2);
+//$url_7: url(../../fonts/Roboto-Black.woff);
+//$url_8: url(../../fonts/Roboto-BlackItalic.woff2);
+//$url_9: url(../../fonts/Roboto-BlackItalic.woff);
+//$url_10: url(../../fonts/Roboto-MediumItalic.woff2);
+//$url_11: url(../../fonts/Roboto-MediumItalic.woff);
+//$url_12: url(../../fonts/Roboto-Medium.woff2);
+//$url_13: url(../../fonts/Roboto-Medium.woff);
+//$url_14: url(../../fonts/Roboto-Thin.woff2);
+//$url_15: url(../../fonts/Roboto-Thin.woff);
+//$url_16: url(../../fonts/Roboto-Italic.woff2);
+//$url_17: url(../../fonts/Roboto-Italic.woff);
+//$url_18: url(../../fonts/Roboto-Regular.woff2);
+//$url_19: url(../../fonts/Roboto-Regular.woff);
+//$url_20: url(../../fonts/Roboto-BoldItalic.woff2);
+//$url_21: url(../../fonts/Roboto-BoldItalic.woff);
+//$url_22: url(../../fonts/Roboto-Light.woff2);
+//$url_23: url(../../fonts/Roboto-Light.woff);
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 300;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_0 format('woff2'), $url_1 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 100;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_2 format('woff2'), $url_3 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 700;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_4 format('woff2'), $url_5 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 900;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_6 format('woff2'), $url_7 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 900;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_8 format('woff2'), $url_9 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 500;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_10 format('woff2'), $url_11 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 500;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_12 format('woff2'), $url_13 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 100;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_14 format('woff2'), $url_15 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: normal;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_16 format('woff2'), $url_17 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: normal;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_18 format('woff2'), $url_19 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 700;
+//  font-style: italic;
+//
+//  @include font_default;
+//  src: $url_20 format('woff2'), $url_21 format('woff');
+//}
+//@font-face {
+//  font-family: $font_0;
+//  font-weight: 300;
+//  font-style: normal;
+//
+//  @include font_default;
+//  src: $url_22 format('woff2'), $url_23 format('woff');
+//}
+//@font-face {
+//  @include font_default;
+//  font-family: $family-emoji;
+//  font-weight: normal;
+//  font-style: normal;
+//  src: url(../../fonts/Symbola.eot);
+//  src: local('Apple Color Emoji'),
+//  local('Android Emoji'),
+//  local('Segoe UI'),
+//  local('EmojiSymbols'),local('Symbola'), url(../../fonts/Symbola.eot?#iefix) format('embedded-opentype'), url(../../fonts/Symbola.woff2) format('woff2'), url(../../fonts/Symbola.woff) format('woff'), url(../../fonts/Symbola.ttf) format('truetype'), url(../../fonts/Symbola.svg#Symbola) format('svg');
+//  /* Emoji unicode blocks */
+//  unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+//}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans-caption;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/PTSans-Caption.eot);
+  src: local('PT Sans Caption'), local('PTSans-Caption'), url(../../fonts/PTSans-Caption.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-Caption.woff2) format('woff2'), url(../../fonts/PTSans-Caption.woff) format('woff'), url(../../fonts/PTSans-Caption.ttf) format('truetype'), url(../../fonts/PTSans-Caption.svg#PTSans-Caption) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-bebas-neue;
+  font-weight: bold;
+  font-style: normal;
+  src: url(../../fonts/BebasNeueBold.eot);
+  src: local('Bebas Neue Bold'), local('BebasNeueBold'), url(../../fonts/BebasNeueBold.eot?#iefix) format('embedded-opentype'), url(../../fonts/BebasNeueBold.woff2) format('woff2'), url(../../fonts/BebasNeueBold.woff) format('woff'), url(../../fonts/BebasNeueBold.ttf) format('truetype'), url(../../fonts/BebasNeueBold.svg#BebasNeueBold) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/PTSans-Regular.eot);
+  src: local('PT Sans'), local('PTSans-Regular'), url(../../fonts/PTSans-Regular.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-Regular.woff2) format('woff2'), url(../../fonts/PTSans-Regular.woff) format('woff'), url(../../fonts/PTSans-Regular.ttf) format('truetype'), url(../../fonts/PTSans-Regular.svg#PTSans-Regular) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans;
+  font-weight: bold;
+  font-style: italic;
+  src: url(../../fonts/PTSans-BoldItalic.eot);
+  src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(../../fonts/PTSans-BoldItalic.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-BoldItalic.woff2) format('woff2'), url(../../fonts/PTSans-BoldItalic.woff) format('woff'), url(../../fonts/PTSans-BoldItalic.ttf) format('truetype'), url(../../fonts/PTSans-BoldItalic.svg#PTSans-BoldItalic) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans-narrow;
+  font-weight: bold;
+  font-style: normal;
+  src: url(../../fonts/PTSans-NarrowBold.eot);
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(../../fonts/PTSans-NarrowBold.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-NarrowBold.woff2) format('woff2'), url(../../fonts/PTSans-NarrowBold.woff) format('woff'), url(../../fonts/PTSans-NarrowBold.ttf) format('truetype'), url(../../fonts/PTSans-NarrowBold.svg#PTSans-NarrowBold) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans-narrow;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/PTSans-Narrow.eot);
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(../../fonts/PTSans-Narrow.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-Narrow.woff2) format('woff2'), url(../../fonts/PTSans-Narrow.woff) format('woff'), url(../../fonts/PTSans-Narrow.ttf) format('truetype'), url(../../fonts/PTSans-Narrow.svg#PTSans-Narrow) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-bebas-neue;
+  font-weight: 100;
+  font-style: normal;
+  src: url(../../fonts/BebasNeue-Thin.eot);
+  src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), url(../../fonts/BebasNeue-Thin.eot?#iefix) format('embedded-opentype'), url(../../fonts/BebasNeue-Thin.woff2) format('woff2'), url(../../fonts/BebasNeue-Thin.woff) format('woff'), url(../../fonts/BebasNeue-Thin.ttf) format('truetype'), url(../../fonts/BebasNeue-Thin.svg#BebasNeue-Thin) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-bebas-neue-book;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/BebasNeueBook.eot);
+  src: local('Bebas Neue Book'), local('BebasNeueBook'), url(../../fonts/BebasNeueBook.eot?#iefix) format('embedded-opentype'), url(../../fonts/BebasNeueBook.woff2) format('woff2'), url(../../fonts/BebasNeueBook.woff) format('woff'), url(../../fonts/BebasNeueBook.ttf) format('truetype'), url(../../fonts/BebasNeueBook.svg#BebasNeueBook) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-bebas-neue;
+  font-weight: 300;
+  font-style: normal;
+  src: url(../../fonts/BebasNeueLight.eot);
+  src: local('Bebas Neue Light'), local('BebasNeueLight'), url(../../fonts/BebasNeueLight.eot?#iefix) format('embedded-opentype'), url(../../fonts/BebasNeueLight.woff2) format('woff2'), url(../../fonts/BebasNeueLight.woff) format('woff'), url(../../fonts/BebasNeueLight.ttf) format('truetype'), url(../../fonts/BebasNeueLight.svg#BebasNeueLight) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans;
+  font-weight: bold;
+  font-style: normal;
+  src: url(../../fonts/PTSans-Bold.eot);
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(../../fonts/PTSans-Bold.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-Bold.woff2) format('woff2'), url(../../fonts/PTSans-Bold.woff) format('woff'), url(../../fonts/PTSans-Bold.ttf) format('truetype'), url(../../fonts/PTSans-Bold.svg#PTSans-Bold) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans;
+  font-weight: normal;
+  font-style: italic;
+  src: url(../../fonts/PTSans-Italic.eot);
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(../../fonts/PTSans-Italic.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-Italic.woff2) format('woff2'), url(../../fonts/PTSans-Italic.woff) format('woff'), url(../../fonts/PTSans-Italic.ttf) format('truetype'), url(../../fonts/PTSans-Italic.svg#PTSans-Italic) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-pt-sans-caption;
+  font-weight: bold;
+  font-style: normal;
+  src: url(../../fonts/PTSans-CaptionBold.eot);
+  src: local('PT Sans Caption Bold'), local('PTSans-CaptionBold'), url(../../fonts/PTSans-CaptionBold.eot?#iefix) format('embedded-opentype'), url(../../fonts/PTSans-CaptionBold.woff2) format('woff2'), url(../../fonts/PTSans-CaptionBold.woff) format('woff'), url(../../fonts/PTSans-CaptionBold.ttf) format('truetype'), url(../../fonts/PTSans-CaptionBold.svg#PTSans-CaptionBold) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-bebas-neue;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/BebasNeueRegular.eot);
+  src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url(../../fonts/BebasNeueRegular.eot?#iefix) format('embedded-opentype'), url(../../fonts/BebasNeueRegular.woff2) format('woff2'), url(../../fonts/BebasNeueRegular.woff) format('woff'), url(../../fonts/BebasNeueRegular.ttf) format('truetype'), url(../../fonts/BebasNeueRegular.svg#BebasNeueRegular) format('svg');
+}
+@font-face {
+  @include font_default;
+  font-family: $family-notomoji;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/NotoEmoji-Regular.ttf) format("truetype");
+}
+@font-face {
+  @include font_default;
+  font-family: $family-notomoji-color;
+  font-weight: normal;
+  font-style: normal;
+  src: url(../../fonts/NotoColorEmoji.ttf) format("truetype");
+}
+// Библиотека иконка для принтбара
+$icomoon-font-family: "printbar-icon" !default;
+$icomoon-font-path: "../../fonts" !default;
+
+$pb_icon-box-discount: "\e955";
+$pb_icon-box-filter: "\e956";
+$pb_icon-sumki-shoperi: "\e900";
+$pb_icon-plyajnie-sumki: "\e901";
+$pb_icon-futbolki: "\e902";
+$pb_icon-hudi: "\e903";
+$pb_icon-tolstovki: "\e904";
+$pb_icon-bomber: "\e905";
+$pb_icon-polo: "\e906";
+$pb_icon-shorti-muzhskie: "\e907";
+$pb_icon-kupalniki-bodi: "\e908";
+$pb_icon-platie-s-rukavom: "\e909";
+$pb_icon-platie-s-manjetoy: "\e90a";
+$pb_icon-platie-bez-rukavov: "\e90b";
+$pb_icon-platie-rubashka: "\e90c";
+$pb_icon-leginsi: "\e90d";
+$pb_icon-ubka-karandash: "\e90e";
+$pb_icon-ubka-s-melkimi-skladkami: "\e90f";
+$pb_icon-shorti-jenskie: "\e910";
+$pb_icon-shapki: "\e911";
+$pb_icon-mayki: "\e912";
+$pb_icon-maiki-borcovki: "\e913";
+$pb_icon-chehli: "\e914";
+$pb_icon-kruzhki: "\e915";
+$pb_icon-noski: "\e916";
+$pb_icon-futform: "\e917";
+$pb_icon-longslivi: "\e918";
+$pb_icon-shtani: "\e919";
+$pb_icon-sportivnye-kostyumy: "\e91a";
+$pb_icon-plakati: "\e91b";
+$pb_icon-otkritki: "\e91c";
+$pb_icon-hlopkovie-futbolki: "\e91d";
+$pb_icon-dozhediviki: "\e91e";
+$pb_icon-yourDesign: "\e91f";
+$pb_icon-question: "\e920";
+$pb_icon-arrowclick: "\e94f";
+$pb_icon-download-box: "\e954";
+$pb_icon-arrowDown: "\e921";
+$pb_icon-arrow: "\e922";
+$pb_icon-arrow-right: "\e950";
+$pb_icon-lineArrow: "\e923";
+$pb_icon-ok: "\e924";
+$pb_icon-search: "\e925";
+$pb_icon-cart1: "\e951";
+$pb_icon-cart: "\e926";
+$pb_icon-cartPlus: "\e927";
+$pb_icon-onlinepay: "\e952";
+$pb_icon-click: "\e928";
+$pb_icon-account: "\e929";
+$pb_icon-phone: "\e92a";
+$pb_icon-discont: "\e92b";
+$pb_icon-noGender: "\e92c";
+$pb_icon-men: "\e92d";
+$pb_icon-woman: "\e92e";
+$pb_icon-boy: "\e92f";
+$pb_icon-girl: "\e930";
+$pb_icon-hit: "\e931";
+$pb_icon-new: "\e932";
+$pb_icon-top: "\e933";
+$pb_icon-likedProductsHeart: "\e934";
+$pb_icon-heart-border: "\e94e";
+$pb_icon-heart: "\e935";
+$pb_icon-geo: "\e936";
+$pb_icon-signpost: "\e937";
+$pb_icon-filter: "\e938";
+$pb_icon-card: "\e939";
+$pb_icon-deli: "\e93a";
+$pb_icon-like: "\e93b";
+$pb_icon-rus: "\e93c";
+$pb_icon-shield: "\e93d";
+$pb_icon-wash: "\e93e";
+$pb_icon-facebook: "\e93f";
+$pb_icon-google: "\e940";
+$pb_icon-ok-soc: "\e941";
+$pb_icon-vk: "\e942";
+$pb_icon-twitter: "\e943";
+$pb_icon-instagram: "\e944";
+$pb_icon-cotton: "\e945";
+$pb_pb_icon_coton: "\10ffff";
+$pb_icon-collection-path1: "\e946";
+$pb_icon-collection-path2: "\e947";
+$pb_icon-gift-path1: "\e948";
+$pb_icon-gift-path2: "\e949";
+$pb_icon-gift-path3: "\e94a";
+$pb_icon-gift-path4: "\e94b";
+$pb_icon-gift-path5: "\e94c";
+$pb_icon-gift-path6: "\e94d";
+$pb_icon-gift-path7: "\e953";
+$pb_icon-cup-color-path1: "\e957";
+$pb_icon-cup-color-path2: "\e958";
+$pb_icon-cup-color-path3: "\e959";
+$pb_icon-cup-color-path4: "\e95a";
+$pb_icon-star: "\e95a";
+@font-face {
+  @include font_default;
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3qxos1');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3qxos1#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3qxos1') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3qxos1') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3qxos1##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="pb_icon-"], [class*="pb_icon-"],
+[class^="pb_icon-"]:before, [class*="pb_icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.pb_icon-box-discount {
+  &:before {
+    content: $pb_icon-box-discount;
+  }
+}
+.pb_icon-box-filter {
+  &:before {
+    content: $pb_icon-box-filter;
+  }
+}
+.pb_icon-sumki-shoperi {
+  &:before {
+    content: $pb_icon-sumki-shoperi;
+  }
+}
+.pb_icon-plyajnie-sumki {
+  &:before {
+    content: $pb_icon-plyajnie-sumki;
+  }
+}
+.pb_icon-futbolki {
+  &:before {
+    content: $pb_icon-futbolki;
+  }
+}
+.pb_icon-hudi {
+  &:before {
+    content: $pb_icon-hudi;
+  }
+}
+.pb_icon-tolstovki {
+  &:before {
+    content: $pb_icon-tolstovki;
+  }
+}
+.pb_icon-bomber {
+  &:before {
+    content: $pb_icon-bomber;
+  }
+}
+.pb_icon-polo {
+  &:before {
+    content: $pb_icon-polo;
+  }
+}
+.pb_icon-shorti-muzhskie {
+  &:before {
+    content: $pb_icon-shorti-muzhskie;
+  }
+}
+.pb_icon-kupalniki-bodi {
+  &:before {
+    content: $pb_icon-kupalniki-bodi;
+  }
+}
+.pb_icon-platie-s-rukavom {
+  &:before {
+    content: $pb_icon-platie-s-rukavom;
+  }
+}
+.pb_icon-platie-s-manjetoy {
+  &:before {
+    content: $pb_icon-platie-s-manjetoy;
+  }
+}
+.pb_icon-platie-bez-rukavov {
+  &:before {
+    content: $pb_icon-platie-bez-rukavov;
+  }
+}
+.pb_icon-platie-rubashka {
+  &:before {
+    content: $pb_icon-platie-rubashka;
+  }
+}
+.pb_icon-leginsi {
+  &:before {
+    content: $pb_icon-leginsi;
+  }
+}
+.pb_icon-ubka-karandash {
+  &:before {
+    content: $pb_icon-ubka-karandash;
+  }
+}
+.pb_icon-ubka-s-melkimi-skladkami {
+  &:before {
+    content: $pb_icon-ubka-s-melkimi-skladkami;
+  }
+}
+.pb_icon-shorti-jenskie {
+  &:before {
+    content: $pb_icon-shorti-jenskie;
+  }
+}
+.pb_icon-shapki {
+  &:before {
+    content: $pb_icon-shapki;
+  }
+}
+.pb_icon-mayki {
+  &:before {
+    content: $pb_icon-mayki;
+  }
+}
+.pb_icon-maiki-borcovki {
+  &:before {
+    content: $pb_icon-maiki-borcovki;
+  }
+}
+.pb_icon-chehli {
+  &:before {
+    content: $pb_icon-chehli;
+  }
+}
+.pb_icon-kruzhki {
+  &:before {
+    content: $pb_icon-kruzhki;
+  }
+}
+.pb_icon-noski {
+  &:before {
+    content: $pb_icon-noski;
+  }
+}
+.pb_icon-futform {
+  &:before {
+    content: $pb_icon-futform;
+  }
+}
+.pb_icon-longslivi {
+  &:before {
+    content: $pb_icon-longslivi;
+  }
+}
+.pb_icon-shtani {
+  &:before {
+    content: $pb_icon-shtani;
+  }
+}
+.pb_icon-sportivnye-kostyumy {
+  &:before {
+    content: $pb_icon-sportivnye-kostyumy;
+  }
+}
+.pb_icon-plakati {
+  &:before {
+    content: $pb_icon-plakati;
+  }
+}
+.pb_icon-otkritki {
+  &:before {
+    content: $pb_icon-otkritki;
+  }
+}
+.pb_icon-hlopkovie-futbolki {
+  &:before {
+    content: $pb_icon-hlopkovie-futbolki;
+  }
+}
+.pb_icon-dozhediviki {
+  &:before {
+    content: $pb_icon-dozhediviki;
+  }
+}
+.pb_icon-yourDesign {
+  &:before {
+    content: $pb_icon-yourDesign;
+  }
+}
+.pb_icon-question {
+  &:before {
+    content: $pb_icon-question;
+  }
+}
+.pb_icon-arrowclick {
+  &:before {
+    content: $pb_icon-arrowclick;
+  }
+}
+.pb_icon-download-box {
+  &:before {
+    content: $pb_icon-download-box;
+  }
+}
+.pb_icon-arrowDown {
+  &:before {
+    content: $pb_icon-arrowDown;
+  }
+}
+.pb_icon-arrow {
+  &:before {
+    content: $pb_icon-arrow;
+  }
+}
+.pb_icon-arrow-right {
+  &:before {
+    content: $pb_icon-arrow-right;
+  }
+}
+.pb_icon-lineArrow {
+  &:before {
+    content: $pb_icon-lineArrow;
+  }
+}
+.pb_icon-ok {
+  &:before {
+    content: $pb_icon-ok;
+  }
+}
+.pb_icon-search {
+  &:before {
+    content: $pb_icon-search;
+  }
+}
+.pb_icon-cart1 {
+  &:before {
+    content: $pb_icon-cart1;
+  }
+}
+.pb_icon-cart {
+  &:before {
+    content: $pb_icon-cart;
+  }
+}
+.pb_icon-cartPlus {
+  &:before {
+    content: $pb_icon-cartPlus;
+  }
+}
+.pb_icon-onlinepay {
+  &:before {
+    content: $pb_icon-onlinepay;
+  }
+}
+.pb_icon-click {
+  &:before {
+    content: $pb_icon-click;
+  }
+}
+.pb_icon-account {
+  &:before {
+    content: $pb_icon-account;
+  }
+}
+.pb_icon-phone {
+  &:before {
+    content: $pb_icon-phone;
+  }
+}
+.pb_icon-discont {
+  &:before {
+    content: $pb_icon-discont;
+  }
+}
+.pb_icon-noGender {
+  &:before {
+    content: $pb_icon-noGender;
+  }
+}
+.pb_icon-men {
+  &:before {
+    content: $pb_icon-men;
+  }
+}
+.pb_icon-woman {
+  &:before {
+    content: $pb_icon-woman;
+  }
+}
+.pb_icon-boy {
+  &:before {
+    content: $pb_icon-boy;
+  }
+}
+.pb_icon-girl {
+  &:before {
+    content: $pb_icon-girl;
+  }
+}
+.pb_icon-hit {
+  &:before {
+    content: $pb_icon-hit;
+  }
+}
+.pb_icon-new {
+  &:before {
+    content: $pb_icon-new;
+  }
+}
+.pb_icon-top {
+  &:before {
+    content: $pb_icon-top;
+  }
+}
+.pb_icon-likedProductsHeart {
+  &:before {
+    content: $pb_icon-likedProductsHeart;
+  }
+}
+.pb_icon-heart-border {
+  &:before {
+    content: $pb_icon-heart-border;
+  }
+}
+.pb_icon-heart {
+  &:before {
+    content: $pb_icon-heart;
+  }
+}
+.pb_icon-geo {
+  &:before {
+    content: $pb_icon-geo;
+  }
+}
+.pb_icon-signpost {
+  &:before {
+    content: $pb_icon-signpost;
+  }
+}
+.pb_icon-filter {
+  &:before {
+    content: $pb_icon-filter;
+  }
+}
+.pb_icon-card {
+  &:before {
+    content: $pb_icon-card;
+  }
+}
+.pb_icon-deli {
+  &:before {
+    content: $pb_icon-deli;
+  }
+}
+.pb_icon-like {
+  &:before {
+    content: $pb_icon-like;
+  }
+}
+.pb_icon-rus {
+  &:before {
+    content: $pb_icon-rus;
+  }
+}
+.pb_icon-shield {
+  &:before {
+    content: $pb_icon-shield;
+  }
+}
+.pb_icon-wash {
+  &:before {
+    content: $pb_icon-wash;
+  }
+}
+.pb_icon-facebook {
+  &:before {
+    content: $pb_icon-facebook;
+  }
+}
+.pb_icon-google {
+  &:before {
+    content: $pb_icon-google;
+  }
+}
+.pb_icon-ok-soc {
+  &:before {
+    content: $pb_icon-ok-soc;
+  }
+}
+.pb_icon-vk {
+  &:before {
+    content: $pb_icon-vk;
+  }
+}
+.pb_icon-twitter {
+  &:before {
+    content: $pb_icon-twitter;
+  }
+}
+.pb_icon-instagram {
+  &:before {
+    content: $pb_icon-instagram;
+  }
+}
+.pb_icon-cotton {
+  &:before {
+    content: $pb_icon-cotton;
+  }
+}
+.pb_pb_icon_coton {
+  &:before {
+    content: $pb_pb_icon_coton;
+  }
+}
+.pb_icon-collection .path1 {
+  &:before {
+    content: $pb_icon-collection-path1;
+    color: rgb(255, 0, 0);
+  }
+}
+.pb_icon-collection .path2 {
+  &:before {
+    content: $pb_icon-collection-path2;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.pb_icon-gift .path1 {
+  &:before {
+    content: $pb_icon-gift-path1;
+    color: rgb(155, 81, 224);
+  }
+}
+.pb_icon-gift .path2 {
+  &:before {
+    content: $pb_icon-gift-path2;
+    margin-left: -1em;
+    color: rgb(242, 201, 76);
+  }
+}
+.pb_icon-gift .path3 {
+  &:before {
+    content: $pb_icon-gift-path3;
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+    opacity: 0.12;
+  }
+}
+.pb_icon-gift .path4 {
+  &:before {
+    content: $pb_icon-gift-path4;
+    margin-left: -1em;
+    color: rgb(237, 110, 164);
+  }
+}
+.pb_icon-gift .path5 {
+  &:before {
+    content: $pb_icon-gift-path5;
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+    opacity: 0.12;
+  }
+}
+.pb_icon-gift .path6 {
+  &:before {
+    content: $pb_icon-gift-path6;
+    margin-left: -1em;
+    color: rgb(237, 110, 164);
+  }
+}
+.pb_icon-gift .path7 {
+  &:before {
+    content: $pb_icon-gift-path7;
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+  }
+}
+.pb_icon-cup-color .path1 {
+  &:before {
+    content: $pb_icon-cup-color-path1;
+  }
+}
+.pb_icon-cup-color .path2 {
+  &:before {
+    content: $pb_icon-cup-color-path2;
+    margin-left: -1em;
+  }
+}
+.pb_icon-cup-color .path3 {
+  &:before {
+    content: $pb_icon-cup-color-path3;
+    margin-left: -1em;
+  }
+}
+.pb_icon-cup-color .path4 {
+  &:before {
+    content: $pb_icon-cup-color-path4;
+    margin-left: -1em;
+  }
+}
+.pb_icon-star {
+  &:before {
+    content: $pb_icon-star;
+  }
+}

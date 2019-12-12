@@ -1,0 +1,199 @@
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(359deg)
+  }
+}
+// Placeholders
+@mixin placeholder {
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content
+    }
+  }
+}
+// Text select - off
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+%unselectable {
+  @include unselectable
+}
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+@mixin overflow-touch {
+  -webkit-overflow-scrolling: touch
+}
+@mixin loader {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid $grey-lighter;
+  border-radius: $radius-rounded;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+@mixin hamburger($dimensions: 0) {
+  cursor: pointer;
+  display: block;
+  height: $dimensions;
+  position: relative;
+  width: $dimensions;
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 2px;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: $speed;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: $easing;
+    width: 20px;
+    &:nth-child(1) {
+      top: calc(50% - 10px)
+    }
+    &:nth-child(2) {
+      top: calc(50% - 1px)
+    }
+    &:nth-child(3) {
+      top: calc(50% + 8px)
+    }
+  }
+  // Modifers
+  //&:hover {
+  //  background-color: rgba(black, 0.05)
+  //}
+  //&:hover,
+  //&.is-active {
+  //  span {
+  //    &:nth-child(1) {
+  //      transform: translateY(9px) rotate(45deg)
+  //    }
+  //    &:nth-child(2) {
+  //      opacity: 0
+  //    }
+  //    &:nth-child(3) {
+  //      transform: translateY(-9px) rotate(-45deg)
+  //    }
+  //  }
+  //}
+}
+
+//@mixin arrow($color: transparent, $rotate: -45deg, $bsize: 3px) {
+//  span {
+//    border: $bsize solid $color;
+//    border-radius: 2px;
+//    border-right: 0;
+//    border-top: 0;
+//    content: " ";
+//    display: block;
+//    height: 0.625em;
+//    margin-top: -0.4375em;
+//    pointer-events: none;
+//    position: absolute;
+//    top: 50%;
+//    transform: rotate($rotate);
+//    transform-origin: center;
+//    transition-duration: $speed;
+//    transition-property: transform;
+//    transition-timing-function: $easing;
+//    width: 0.625em;
+//  }
+//  //// Modifers
+//  //&:hover {
+//  //  span {
+//  //    transform: rotate(-225deg);
+//  //  }
+//  //}
+//}
+@mixin arrow($color: transparent) {
+  span {
+    //border: 3px solid $color;
+    border: 4px solid $color;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    //height: 0.625em;
+    //width: 0.625em;
+    width: 0.575em;
+    height: 0.575em;
+    margin-top: -0.4375em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    //transform: rotate(-45deg);
+    transform: rotate(-135deg);
+    transform-origin: center;
+    transition-duration: $speed;
+    transition-property: transform;
+    transition-timing-function: $easing;
+
+  }
+  // Modifers
+  //&:hover {
+  //  span {
+  //    transform: rotate(-225deg);
+  //  }
+  //}
+}
+
+
+
+
+@mixin overlay($offset: 0) {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
+}
+//-----------------------------------------------------------------------
+// Convert font-size from px to rem with px fallback
+// @param $size - the value in pixel you want to convert
+// e.g. p {@include fontSize(12px);}
+//-----------------------------------------------------------------------
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / $font-size;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  //font-size: $size;
+  font-size: calculateRem($size);
+}
+//-----------------------------------------------------------------------
+//  Function to remove units
+//  http://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass
+//-----------------------------------------------------------------------
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+//-----------------------------------------------------------------------
+//  Font/Line Height
+//  pass in the photoshop font size and line height in the same order
+//  they're displayed in the character window
+//-----------------------------------------------------------------------
+@mixin line-height($ps-font-size, $ps-line-height: $ps-font-size) {
+  line-height: (strip-units($ps-line-height) / strip-units($ps-font-size));
+}

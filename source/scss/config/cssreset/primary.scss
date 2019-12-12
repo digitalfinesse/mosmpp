@@ -1,0 +1,56 @@
+//@extend-elements
+//original selectors
+//a:focus, a:hover, a:visited
+%primary_1 {
+  text-decoration: inherit;
+  outline: 0;
+  outline: none;
+}
+html {
+  min-width: 320px;
+  font-family: $family-sans-serif;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  * {
+    //font-family: $family-sans-serif;
+    font-weight: normal;
+  }
+}
+body {
+  min-width: 320px;
+}
+a {
+  text-decoration: inherit;
+  &:focus {
+    @extend %primary_1;
+  }
+  &:hover {
+    @extend %primary_1;
+  }
+  &:visited {
+    @extend %primary_1;
+  }
+}
+b {
+  font-weight: 700;
+}
+strong {
+  font-weight: 700;
+}
+* {
+  //Instead of the line below you could use @include box-sizing($bs)
+  //box-sizing: initial;
+}
+*::before {
+  //Instead of the line below you could use @include box-sizing($bs)
+  //box-sizing: initial;
+}
+*::after {
+  //Instead of the line below you could use @include box-sizing($bs)
+  //box-sizing: initial;
+}
+img {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: content-box;
+}

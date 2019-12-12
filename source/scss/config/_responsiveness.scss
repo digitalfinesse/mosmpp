@@ -1,0 +1,74 @@
+//https://css-live.ru/articles-css/pravilnye-kontrolnye-tochki-v-css.html
+//https://github.com/luqmaan/sass_to_scss
+//https://bulma.io/documentation/overview/responsiveness/
+//@mixin for-size($range) {
+////  $phone-upper-boundary: 600px;
+////  $tablet-portrait-upper-boundary: 900px;
+////  $tablet-landscape-upper-boundary: 1200px;
+////  $desktop-upper-boundary: 1800px;
+////
+////  @if $range == phone-only {
+////    @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+////  } @else if $range == tablet-portrait-up {
+////    @media (min-width: $phone-upper-boundary) { @content; }
+////  } @else if $range == tablet-landscape-up {
+////    @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+////  } @else if $range == desktop-up {
+////    @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+////  } @else if $range == big-desktop-up {
+////    @media (min-width: $desktop-upper-boundary) { @content; }
+////  }
+////}
+
+
+/////// Responsiveness
+//mobile: up to 768px
+//tablet: from 769px
+//desktop: from 1024px
+//widescreen: from 1216px
+//fullhd: from 1408px
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default;
+$mobile: 576px !default;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap) !default;
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap) !default;
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap) !default;
+@mixin for-size($range, $size: 576) {
+  //  Custom (px)
+  $device: $size+px;
+
+  @if $range == until-mobile {
+    @media screen and (max-width: $mobile - 1px) { @content; }
+  } @else if $range == mobile {
+    @media screen and (max-width: $tablet - 1px) { @content; }
+  } @else if $range == tablet {
+    @media screen and (min-width: $tablet), print { @content; }
+  } @else if $range == tablet-only {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) { @content; }
+  } @else if $range == touching {
+    @media screen and (max-width: $desktop - 1px) { @content; }
+  } @else if $range == desktop {
+    @media screen and (min-width: $desktop) { @content; }
+  } @else if $range == desktop-only {
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) { @content; }
+  } @else if $range == until-widescreen {
+    @media screen and (max-width: $widescreen - 1px) { @content; }
+  } @else if $range == widescreen {
+    @media screen and (min-width: $widescreen) { @content; }
+  } @else if $range == widescreen-only {
+    @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px) { @content; }
+  } @else if $range == until-fullhd {
+    @media screen and (max-width: $fullhd - 1px) { @content; }
+  } @else if $range == fullhd {
+    @media screen and (min-width: $fullhd) { @content; }
+  } @else if $range == min { //Custom min-width
+    @media screen and (min-width: $device) { @content; }
+  } @else if $range == max { //Custom max-width
+    @media screen and (max-width: $device - 1px) { @content; }
+  }
+}

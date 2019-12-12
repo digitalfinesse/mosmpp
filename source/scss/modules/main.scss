@@ -1,0 +1,60 @@
+@import '../config/responsiveness';
+@import '../config/default';
+// usage
+
+//.my-box {
+////  padding: 10px;
+////  @include for-size(mobile){
+////    padding: 10px;
+////  }
+////}
+
+html {
+  font: 14px/1.15 'PT Sans', sans-serif;
+}
+
+.mosmpp__container {
+  max-width: 1180px;
+  padding: 20px 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media(max-width: $tablet) {
+    padding: 20px;
+  }
+  @media(max-width: $mobile) {
+    padding: 8px;
+  }
+}
+
+
+.mosmpp__flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mosmpp__flex-1 {
+  flex-basis: auto;
+}
+.mosmpp__flex-2 {
+  flex-basis: 50%;
+}
+.mosmpp__flex-3 {
+  flex-basis: 33.3333333%;
+}
+.mosmpp__flex-4 {
+  flex-basis: 25%;
+}
+.mosmpp__flex-5 {
+  flex-basis: 20%;
+}
+.mosmpp__flex-6 {
+  flex-basis: 16.666%;
+}
+.mosmpp__flex-max {
+  flex-grow: 1;
+
+  max-width: 100%;
+}
+
